@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2022_05_07_151722) do
 
   # These are extensions that must be enabled in order to support this database
@@ -55,5 +54,4 @@ ActiveRecord::Schema.define(version: 2022_05_07_151722) do
   add_foreign_key "bikes", "users"
   add_foreign_key "bookings", "bikes"
   add_foreign_key "bookings", "users"
-
 end
