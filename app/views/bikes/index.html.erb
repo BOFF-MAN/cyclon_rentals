@@ -1,0 +1,7 @@
+<h1>Our bikes</h1>
+
+<ul>
+  <% @bikes.each do |bike| %>
+  <li><%= bike.name %> - <%= bike.daily_rate %></li>
+  <% end %>
+</ul>
