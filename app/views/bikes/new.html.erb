@@ -1,0 +1,12 @@
+<h1>Add a new Bike</h1>
+
+<%= simple_form_for @bike do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :daily_rate %>
+  <%= f.input :address %>
+  <%# <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Cancel", bikes_path %>
