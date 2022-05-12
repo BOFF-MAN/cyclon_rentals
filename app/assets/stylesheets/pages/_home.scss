@@ -5,9 +5,10 @@ body {
 }
 
 .banner {
+  position: relative;
   background-size: cover;
   background-position: center;
-  padding: 300px 0;
+  padding: 500px 0;
 }
 
 .banner h1 {
@@ -35,10 +36,11 @@ body {
 }
 
 .container-home {
+position: absolute !important;
 width: 100%;
-padding-top: 20px;
-padding-right: 50px;
-padding-left: 50px;
+top: 100px;
+// padding-right: 50px;
+padding-left: 150px;
 margin-right: auto;
 margin-left: auto;
 }
