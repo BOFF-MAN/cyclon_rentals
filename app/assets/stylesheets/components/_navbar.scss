@@ -1,13 +1,22 @@
-.navbar-lewagon {
+.navbar-cyclon {
+  position: sticky !important;
+  // margin-bottom: 25px !important;
   justify-content: space-between;
-  background: white;
-  padding: 25px 0px;
+  padding: 15px 30px;
+  background-color: white;
+  transition: 0.5s background-color ease;
+  height: 90px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  }
+
+.navbar-cyclon-white {
+  background-color: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-cyclon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-cyclon .navbar-brand img {
   width: 40px;
 }
