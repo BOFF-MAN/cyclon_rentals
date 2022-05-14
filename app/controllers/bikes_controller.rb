@@ -4,16 +4,7 @@ class BikesController < ApplicationController
 
   # GET /bikes
   def index
-    # @bikes = Bike.all
-    @bikes = policy_scope(Bike)
-    @markers = @bikes.geocoded.map do |bike|
-      {
-      lat: bike.latitude,
-      lng: bike.longitude,
-      info_window: render_to_string(partial: "info_window", locals: { bike: bike }),
-      image_url: helpers.asset_url("bike-tyre.png")
-      }
-    end
+    @bikes = Bike.all
   end
 
   # GET bikes/:id
@@ -31,7 +22,7 @@ class BikesController < ApplicationController
   # GET /bikes/new
   def new
     @bike = Bike.new
-    authorize @bike
+
   end
 
   # GET /bikes/:id/edit
@@ -42,7 +33,7 @@ class BikesController < ApplicationController
   def create
     @bike = Bike.new(bike_params)
     @bike.user = current_user
-    authorize @bike
+    # authorize @bike
     if @bike.save
       redirect_to bike_path(@bike)
     else
