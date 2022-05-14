@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  before_action :find_bike, only: [:new, :create]
 
   def index
     @bookings = Booking.all
@@ -7,6 +9,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    # @bike = Bike.find(params[:find_bike])
   end
 
   def create
@@ -36,6 +39,14 @@ class BookingsController < ApplicationController
   end
 
   private
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def find_bike
+    @bike = Bike.find(params[:bike_id])
+  end
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :bike_id)
