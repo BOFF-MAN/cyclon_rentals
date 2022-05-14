@@ -1,11 +1,10 @@
 class BikesController < ApplicationController
-  before_action :set_bike, only: [:edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  # before_action :set_bike, only: [:edit, :update, :destroy]
+  # skip_before_action :authenticate_user!, only: [:index, :show]
 
   # GET /bikes
   def index
-    # @bikes = Bike.all
-    @bikes = policy_scope(Bike)
+    @bikes = Bike.all
   end
 
   # GET bikes/:id
@@ -16,7 +15,7 @@ class BikesController < ApplicationController
   # GET /bikes/new
   def new
     @bike = Bike.new
-    authorize @bike
+
   end
 
   # GET /bikes/:id/edit
@@ -27,7 +26,7 @@ class BikesController < ApplicationController
   def create
     @bike = Bike.new(bike_params)
     @bike.user = current_user
-    authorize @bike
+    # authorize @bike
     if @bike.save
       redirect_to bike_path(@bike)
     else
@@ -54,7 +53,7 @@ class BikesController < ApplicationController
 
   def set_bike
     @bike = Bike.new.find(params[:id])
-    authorize @bike
+    # authorize @bike
   end
 
   def bike_params
