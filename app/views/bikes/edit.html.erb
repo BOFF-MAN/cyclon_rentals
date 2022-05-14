@@ -1,6 +1,9 @@
-<h1>Editing <%= @bike.name  %></h1>
-
-<%= render 'form', bike: @bike %>
-
-
-<%= link_to 'Back', bikes_path %>
+<div class="form-container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h1>Editing <%= @bike.name  %></h1>
+      <%= render 'form', bike: @bike %>
+      <%= link_to 'Back', bikes_path %>
+    </div>
+  </div>
+</div>
