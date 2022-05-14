@@ -1,15 +1,34 @@
 <div class="show-container">
-  <div class="show-card">
+  <%# <div class="show-card"> %>
    <div class="show-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @bike.photo.key %>')"></div>
-    <div class="show-card-infos">
+  <%# </div> %>
+      <div class="show-card-infos">
       <div>
         <h2><%= @bike.name %></h2>
+<<<<<<< HEAD
         <p><%= @bike.description %></p>
         <p><%= @bike.address %></p>
+=======
+>>>>>>> master
       </div>
-      <h2 class="show-card-pricing"><%= @bike.daily_rate %></h2>
+      <h3 class="show-card-pricing">£<%= @bike.daily_rate %> p/day</h3>
+        <div class="show-booking">
+         <div style="url(https://res.cloudinary.com/dx4u8lsnu/image/upload/v1652528893/Screenshot_2022-05-14_at_12.46.37_hrj2tj.png)"></div>
+        </div>
+      </div>
+    <div class="show-description">
+      <p><%= @bike.description %></p>
     </div>
-  </div>
+  <div></div>
+    <div class="show-profile">
+      <img src='https://kitt.lewagon.com/placeholder/users/random' class="avatar-large" />
+      <div class="show-profile-content">
+        <p><small>CyclOn User since May 2022</small></p>
+        <p>Jonno has a <strong>5⭐️ rating, with 72 reviews</strong></p>
+      </div>
+    </div>
+    <div></div>
+      <div style="url(https://res.cloudinary.com/dx4u8lsnu/image/upload/v1652022260/tobias-cornille-ZPpC98Vus3k-unsplash_xpegsv.jpg)"></div>
 </div>
 
 <div style="width: 100%; height: 600px;"

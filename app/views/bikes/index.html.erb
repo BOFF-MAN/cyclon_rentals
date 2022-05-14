@@ -1,22 +1,21 @@
-<h1>Our bikes</h1>
-
-<div class="cards">
-
-  <% @bikes.each do |bike| %>
-    <div class="show-card">
-      <% if bike.photo.key? %>
-        <div class="show-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('')"></div>
-      <% else %>
-         <div class="show-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://media.istockphoto.com/vectors/city-bike-icon-vector-id1160272603?k=20&m=1160272603&s=612x612&w=0&h=xCYpwK2JjHG4TbzljsdPqMIJ4_F8rkYNqx528FyiWWA=')"></div>
-      <% end %>
-      <div class="show-card-infos">
-        <div>
-          <h2><%= link_to bike.name, bike_path(bike) %></h2>
-          <p><%= bike.description %></p>
+<div class="container">
+  <h1>Our bikes</h1>
+  <div class="cards">
+    <% @bikes.each do |bike| %>
+      <div class="bike-card">
+        <% if bike.photo.key? %>
+          <div class="bike-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('')"></div>
+        <% else %>
+          <div class="bike-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://media.istockphoto.com/vectors/city-bike-icon-vector-id1160272603?k=20&m=1160272603&s=612x612&w=0&h=xCYpwK2JjHG4TbzljsdPqMIJ4_F8rkYNqx528FyiWWA=')"></div>
+        <% end %>
+        <div class="bike-card-infos">
+          <div>
+            <h2><%= link_to bike.name, bike_path(bike) %></h2>
+            <p><%= bike.description %></p>
+          </div>
+          <h2 class="bike-card-pricing">£<%= bike.daily_rate %>0</h2>
         </div>
-        <h2 class="show-card-pricing">£<%= bike.daily_rate %>0</h2>
       </div>
-    </div>
-  <% end %>
-
+    <% end %>
+  </div>
 </div>
