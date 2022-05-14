@@ -21,8 +21,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# Added devise gem for signup
+# Added devise gem for signup - Sean
 gem 'devise'
+# Added Pundit Gem for Authorisation - Sean
+gem 'pundit'
 # Use Active Storage variant
 gem 'cloudinary', '~> 1.16.0'
 # gem 'image_processing', '~> 1.2'
