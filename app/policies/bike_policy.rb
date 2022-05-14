@@ -10,6 +10,10 @@ class BikePolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   def update?
     user_or_admin
   end
