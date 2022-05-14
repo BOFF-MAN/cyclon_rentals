@@ -6,6 +6,14 @@ class BikesController < ApplicationController
   def index
     # @bikes = Bike.all
     @bikes = policy_scope(Bike)
+    @markers = @bikes.geocoded.map do |bike|
+      {
+      lat: bike.latitude,
+      lng: bike.longitude,
+      info_window: render_to_string(partial: "info_window", locals: { bike: bike }),
+      image_url: helpers.asset_url("bike-tyre.png")
+      }
+    end
   end
 
   # GET bikes/:id
