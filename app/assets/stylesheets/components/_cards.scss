@@ -35,3 +35,40 @@
   align-items: flex-end;
   position: relative;
 }
+
+.bike-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 350px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.bike-card .bike-card-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.bike-card-img {
+  height: 200px;
+  width: 100%;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bike-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.bike-card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
