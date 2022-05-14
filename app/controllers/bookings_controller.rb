@@ -30,4 +30,14 @@ class BookingsController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @bike = @booking.bike
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :bike_id)
+  end
 end
