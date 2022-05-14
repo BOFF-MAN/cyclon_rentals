@@ -1,6 +1,6 @@
 class BikesController < ApplicationController
-  # before_action :set_bike, only: [:edit, :update, :destroy]
-  # skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_bike, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   # GET /bikes
   def index
@@ -52,8 +52,8 @@ class BikesController < ApplicationController
   private
 
   def set_bike
-    @bike = Bike.new.find(params[:id])
-    # authorize @bike
+    @bike = Bike.find(params[:id])
+    authorize @bike
   end
 
   def bike_params

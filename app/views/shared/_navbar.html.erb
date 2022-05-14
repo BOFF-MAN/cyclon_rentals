@@ -16,6 +16,9 @@
         <%= link_to "List your bike", new_bike_path, class: "nav-link" %>
       <%# <% end %>
       </li>
+      <li class="nav-item active">
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </li>
     </ul>
     <div class="nav-item dropdown">
       <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/yuvalzoref" />
