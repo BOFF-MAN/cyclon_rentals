@@ -1,0 +1,114 @@
+// Specific CSS for single bike show-page
+
+body {
+  background-color: #ffffffbb;
+}
+
+.show-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 20px;
+  height: auto;
+  width: 80%;
+  top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+}
+
+.show-card {
+  height: 450px;
+  width: 90%;
+  padding: 0px;
+}
+
+.show-card-img {
+  background-size: cover;
+  border-radius: 15px;
+  height: 350px;
+  width: auto;
+  margin-top: 20px;
+}
+
+.show-description {
+  width: auto;
+  height: auto;
+  padding-top: 20px;
+}
+
+.show-card-infos {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.show-card-pricing {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.show-map {
+
+}
+
+.show-profile {
+
+}
+
+.show-profile-content {
+
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// USER INFO
+
+.show-profile {
+  display: flex;
+  height: 75px;
+  align-items: left;
+  margin-bottom: 8px;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+}
+
+.show-profile .show-profile-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.show-profile p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.show-profile small {
+  color: #999999;
+  font-weight: bold;
+}
+.show-profile .show-profile-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.show-profile:hover .show-profile-actions {
+  opacity: 1;
+}
+
+.show-profile .show-profile-actions a {
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.show-profile .show-profile-actions a:hover {
+  color: #555555;
+}
