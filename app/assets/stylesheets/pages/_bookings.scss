@@ -1,0 +1,21 @@
+.bookings-container {
+  margin: 24px 480px;
+
+}
+
+.booking-card {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0px;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 8px 1px rgb(90, 89, 89);
+  background-color: #EFEAD8;
+}
+
+.booking-card-info {
+  pre {
+    margin: 0px;
+    padding: 0px;
+  }
+}

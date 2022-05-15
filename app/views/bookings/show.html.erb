@@ -1,0 +1,13 @@
+<h1>Booking #<%= @booking.id %></h1>
+
+<h3><%= @booking.bike.name %></h3>
+<p><%= @booking.start_date %></p>
+<p><%= @booking.end_date %></p>
+<p><%= @booking.total %></p>
+
+<%= link to "Edit Booking", edit_bike_booking_path(@booking) %>
+<%= link_to "Delete Booking",
+  booking_path(@booking),
+  method: :delete,
+  data: {confirm: "Are you sure?"}, style: "red bold" %>
+<%= link_to "Back to bikes", bikes_path %>

@@ -17,6 +17,7 @@ class BikesController < ApplicationController
   # GET bikes/:id
   def show
     @bike = Bike.find(params[:id])
+    @booking = Booking.new
     @markers =
       [{
         lat: @bike.latitude,
