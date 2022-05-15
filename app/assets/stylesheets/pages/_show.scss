@@ -17,19 +17,50 @@ body {
   padding-bottom: 20px;
 }
 
+// DB edits on Sunday 15th
+
+.bike-show-container {
+  margin: 40px 240px;
+}
+
+.show-card-booking {
+  background-color: rgb(230, 230, 230);
+  border-radius: 8px;
+  padding: 16px;
+  .btn {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+.show-card-pricing {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  .pricing-box {
+    background-color: rgb(210,210,210);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+  }
+}
+
+.show-card-img {
+  background-size: cover;
+  border-radius: 8px;
+  width: auto;
+  height: 480px;
+}
+
+
+
 .show-card {
   height: 450px;
   width: 90%;
   padding: 0px;
 }
 
-.show-card-img {
-  background-size: cover;
-  border-radius: 15px;
-  height: 350px;
-  width: auto;
-  margin-top: 20px;
-}
+
 
 .show-description {
   width: auto;
@@ -43,11 +74,7 @@ body {
   margin-top: 20px;
 }
 
-.show-card-pricing {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
+
 
 .show-map {
 

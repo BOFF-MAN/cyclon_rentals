@@ -3,6 +3,7 @@
     <%= link_to "Sign up", bikes_path, class: "foot-link" %>
     <%= link_to "FAQ's", bikes_path, class: "foot-link" %>
     <%= link_to "Homepage", root_path, class: "foot-link" %>
+    <p>Logged in as: <%= current_user ? current_user.name : "Not logged in" %></p>
   </div>
   <div class="footer-social-links">
     <a href="#"><i class="fab fa-github"></i></a>

@@ -1,0 +1,13 @@
+<div class="form-container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h1>Edit rental of<% @booking.bike %></h1>
+      <%= simple_form_for @booking do |f| %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <%= f.submit "Rent Bike"%>
+      <% end %>
+      <%= link_to "Cancel", bikes_path %>
+    </div>
+  </div>
+</div>

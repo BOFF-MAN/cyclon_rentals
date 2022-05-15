@@ -1,7 +1,7 @@
 <div class="form-container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h1><% @booking.bike %></h1>
+      <h1>Your rental of<% @booking.bike %></h1>
       <%= render 'form', booking: @booking %>
       <%= link_to "Cancel", bikes_path %>
     </div>
