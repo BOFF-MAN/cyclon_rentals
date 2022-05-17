@@ -1,10 +1,10 @@
 .footer {
   background: #566351;
-  position: absolute;
+  position: static;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 120px;
+  height: 110px;
   padding: 0px 50px;
   margin-top: 30px;
   bottom: 0px;
@@ -12,7 +12,7 @@
   right: 0px;
   margin-bottom: 0px;
   color: #ffffff;
-}
+ }
 
 .footer-spacing {
   margin-top: 20px;
