@@ -5,11 +5,11 @@
       <div class="show-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @bike.photo.key %>')">
       </div>
       <div class="show-description">
-        <h3>About this bike</h3>
+        <h2>About this bike</h2>
         <p><%= @bike.description %></p>
       </div>
       <div class="show-location">
-        <h3>Bike Location</h3>
+        <h2>Bike Location</h2>
         <p><%= @bike.address %></p>
         <div style="width: auto; height: 500px;"
           data-controller="mapbox"
@@ -18,8 +18,14 @@
         </div>
       </div>
       <div class="show-reviews">
-        <h3>Bike Reviews</h3>
-        <%= link_to "Add a review", new_bike_review_path(@bike), class: "btn btn-ghost" %>
+        <h2>Leave a Review</h2>
+        <%= simple_form_for [@bike, @review] do |f| %>
+          <%= f.input :content %>
+          <%= f.input :rating %>
+          <%= f.submit "Submit Review", class:"btn-form-go"%>
+        <% end %>
+
+        <h2>Past Reviews</h2>
         <div class="reviews-container">
           <% @bike.reviews.each do |review| %>
             <div class="review-card">
@@ -30,8 +36,11 @@
                   <p><%= review.content %></p>
                 </div>
               </div>
-              <div>
-                <p><%= review.rating %></p>
+              <p><%= review.created_at %></p>
+              <div class="star-div">
+                <% review.rating.to_i.times do %>
+                  <p>⭐️</p>
+                <% end %>
               </div>
             </div>
           <% end %>
@@ -58,13 +67,13 @@
           </div>
         </div>
         <%= simple_form_for [@bike, @booking] do |f| %>
-          <%= f.input :start_date, as: :date, html5: true %>
-          <%= f.input :end_date, as: :date, html5: true %>
-          <%= f.submit "Book this Bike", class: "btn btn-primary"%>
+          <%= f.input :start_date, as: :date, html5: true, class: "simp-form-input" %>
+          <%= f.input :end_date, as: :date, html5: true, class: "simp-form-input" %>
+          <%= f.submit "Book this Bike", class: "btn btn-form-go"%>
         <% end %>
       </div>
     </div>
-     <button type="button"><%= link_to "Back to bikes", bikes_path %></button>
+    <%= link_to "Back to bikes", bikes_path, class: "btn-back" %>
 
   </div>
 </div>

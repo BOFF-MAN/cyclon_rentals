@@ -3,6 +3,21 @@
 }
 
 
-.form_container {
-  margin-top: 56px;
+.form-container {
+  margin-top: 24px;
+  padding-bottom: 24px;
+  h1 {
+    text-align: center;
+  }
+}
+
+.simp-form-input {
+  max-width: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  box-shadow: none;
+}
+
+a {
+  text-decoration: none;
 }

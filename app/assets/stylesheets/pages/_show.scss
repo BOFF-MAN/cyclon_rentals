@@ -20,15 +20,16 @@ body {
 // DB edits on Sunday 15th
 
 .bike-show-container {
-  margin: 40px 240px;
+  margin: 40px 160px;
 }
 
 .show-card-booking {
   background-color: rgb(230, 230, 230);
+  width: 100%;
   border-radius: 8px;
   padding: 16px;
   .btn {
-    border-radius: 8px;
+    border-radius: 4px;
     width: 100%;
   }
 }
@@ -39,9 +40,10 @@ body {
   justify-content: space-evenly;
   .pricing-box {
     background-color: rgb(210,210,210);
+    width: 30%;
     border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
+    padding: 8px;
+    margin: 8px;
   }
 }
 
@@ -139,4 +141,8 @@ body {
 
 .show-profile .show-profile-actions a:hover {
   color: #555555;
+}
+
+.star-div {
+  display: flex;
 }

@@ -6,7 +6,7 @@
       <div class="booking-card-info">
         <h2>Booking #<%= booking.id %></h2>
         <p>Bike:       <%= booking.bike.name %></p>
-        <p>Booked by:  <%= current_user.name %></p>
+        <p>Booked by:  <%= booking.user.name %></p>
         <p>Dates:      <%= booking.start_date %> - <%= booking.end_date %></p>
         <p>Total Fee:  £<%= booking.total %></p>
         <% if booking.user == current_user %>
@@ -17,8 +17,9 @@
             data: {confirm: "Are you sure?"}, style: "red bold" %>
         <% end %>
       </div>
+      <img src="<%= cl_image_path booking.bike.photo.key %>" class="booking-img">
     </div>
   <% end %>
 
-  <%= link_to "Back to Bikes", bikes_path %>
+  <%= link_to "Back to Bikes", bikes_path, class: "btn-back" %>
 </div>
