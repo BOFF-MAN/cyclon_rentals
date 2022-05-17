@@ -12,6 +12,7 @@ class BikesController < ApplicationController
     #     info_window: render_to_string(partial: "info_window", locals: { bike: bike }),
     #     image_url: helpers.asset_url("bike-tyre.png")
     #     }]
+    #   end
   end
 
   # GET bikes/:id
