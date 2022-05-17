@@ -73,15 +73,33 @@
   margin: 0;
 }
 
+.show-reviews {
+  margin-top: 24px 0px;
+}
+
 .reviews-container {
 
 }
 
-.reviews-card {
+
+
+.review-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px black;
+  width: 60%;
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.review-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    margin-right: 24px;
+  }
 }
 
 .reviews-card-info {
