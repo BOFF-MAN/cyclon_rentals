@@ -3,8 +3,9 @@
     <div class="center">
       <%# <%= image_tag avatar_url(@user), class: "rounded-circle" %>
       <%= @user.name %>
-    </div>
 
+    </div>
+   <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
 
   </div>
 </div>
