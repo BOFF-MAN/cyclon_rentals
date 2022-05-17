@@ -18,12 +18,18 @@
       </div>
       <div class="show-reviews">
         <h3>Bike Reviews</h3>
-        <div class="show-profile">
-          <img src='https://kitt.lewagon.com/placeholder/users/random' class="avatar-large" />
-          <div class="show-profile-content">
-            <p><small>CyclOn User since May 2022</small></p>
-            <p>Jonno has a <strong>5⭐️ rating, with 72 reviews</strong></p>
-          </div>
+        <%= link_to "Add a review", new_bike_review_path(@bike) %>
+        <div class="reviews-container">
+          <% @bike.reviews.each do |review| %>
+            <div class="review-card">
+              <%= cl_image_path "https://res.cloudinary.com/daunt2sk5/image/upload/v1652816262/avatar_istock_yhmpzg.jpg", class: "avatar" %>
+              <div class="review-card-info">
+                <h3><%= review.user.name %></h3>
+                <p><%= review.content %></p>
+              </div>
+              <p><%= review.rating * ⭐️ %></p>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
