@@ -10,6 +10,7 @@
       </div>
       <div class="show-location">
         <h3>Bike Location</h3>
+        <p><%= @bike.address %></p>
         <div style="width: auto; height: 500px;"
           data-controller="mapbox"
           data-mapbox-markers-value="<%= @markers.to_json %>"
@@ -53,6 +54,7 @@
         <% end %>
       </div>
     </div>
+     <button type="button"><%= link_to "Back to bikes", bikes_path %></button>
 
   </div>
 </div>
