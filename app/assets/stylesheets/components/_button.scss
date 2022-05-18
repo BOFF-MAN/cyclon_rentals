@@ -1,0 +1,101 @@
+.btn-ghost {
+  color: #fff;
+  background-color: #566351;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: #2f362c;
+  border: 1px solid #2f362c;
+  background-color: #fff;
+}
+
+.btn-cancel {
+  color: #fff;
+  background-color: #FF6B6B;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-cancel:hover {
+  opacity: 1;
+  color: #FF6B6B;
+  border: 1px solid #FF6B6B;
+  background-color: #fff;
+}
+
+.btn-form-cancel {
+  color: #2f362c;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 24px 0px;
+}
+
+.btn-form-cancel:hover {
+  opacity: 0.5;
+  color: #fff;
+  background-color: #FF6B6B;
+}
+
+.btn-form-go {
+  width: 100%;
+  color: #fff;
+  background-color: #566351;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.btn-form-go:hover {
+  opacity: 1;
+  color: #2f362c;
+  border: 1px solid #2f362c;
+  background-color: #fff;
+}
+
+.btn-back {
+  width: 100%;
+  margin: 24px 4px;
+  border-radius: 4px;
+  background-color: rgb(150,150,150);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px;
+}
+
+.btn-back:hover {
+  background-color: rgb(100,100,100);
+  color: #fff;
+}
+
+.btn-form-secondary {
+  color: #fff;
+  background-color: rgb(150,150,150);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  margin: 16px 0px;
+}
+
+.btn-form-secondary:hover {
+  background-color: rgb(100,100,100);
+  color: #fff;
+}

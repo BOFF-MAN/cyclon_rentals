@@ -1,7 +1,7 @@
 .bookings-container {
-  margin: 24px 480px;
-  min-height: 100vh;
-
+  margin: 24px 48px;
+  width: 60%;
+  align-self: center;
 }
 
 .booking-card {
@@ -10,8 +10,8 @@
   margin: 24px 0px;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 1px 1px 8px 1px rgb(90, 89, 89);
-  background-color: #EFEAD8;
+  background-color: #FDF6EC;
+
 }
 
 .booking-card-info {
@@ -19,4 +19,9 @@
     margin: 0px;
     padding: 0px;
   }
+}
+
+.booking-img {
+  width: 30%;
+  object-fit: cover;
 }

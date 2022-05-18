@@ -1,9 +1,9 @@
 <div class="form-container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h1>Editing <%= @bike.name  %></h1>
+      <h1>Edit your bike: <%= @bike.name  %></h1>
       <%= render 'form', bike: @bike %>
-      <%= link_to 'Back', bikes_path %>
+      <%= link_to 'Cancel', bikes_path, class: "btn-form-cancel" %>
     </div>
   </div>
 </div>
