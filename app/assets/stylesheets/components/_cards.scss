@@ -27,7 +27,6 @@
   margin: 0;
 }
 
-
 .show-card .show-card-infos {
   padding: 16px;
   display: flex;
@@ -37,13 +36,28 @@
 }
 
 .bike-card {
+  height: 225px;
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 350px;
-  margin: 20px;
-  padding: 10px;
+  border-radius: 1px;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  // display: flex;
+  // grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: #566351;
+  font-weight: bolder;
 }
+
+// .bike-card {
+//   overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   width: 350px;
+//   margin: 20px;
+//   padding: 10px;
+// }
 
 .bike-card .bike-card-infos {
   padding: 16px;
@@ -54,9 +68,9 @@
 }
 
 .bike-card-img {
-  height: 200px;
+  height: 150px;
   width: 100%;
-  background-size: 75%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }

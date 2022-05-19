@@ -1,4 +1,5 @@
-<div class="container">
+  <h1>All bikes</h1>
+  <div class="index-container">
   <div class="cards">
     <% @bikes.each do |bike| %>
       <div class="bike-card">
@@ -9,20 +10,18 @@
         <% end %>
         <div class="bike-card-infos">
           <div>
-            <h2><%= link_to bike.name, bike_path(bike) %></h2>
-            <p><%= bike.description %></p>
+            <h2><%= link_to bike.name, bike_path(bike) %> - £<%= bike.daily_rate %>0</h2>
             <p><%= bike.address %></p>
           </div>
-          <h2 class="bike-card-pricing">£<%= bike.daily_rate %>0</h2>
+          <%# <h2 class="bike-card-pricing">£<%= bike.daily_rate %>
         </div>
       </div>
     <% end %>
   </div>
-    <div>
-      <div style="width: auto; height: 500px;"
-        data-controller="mapbox"
-        data-mapbox-markers-value="<%= @markers.to_json %>"
-        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+</div>
+    <div class="" style="width: auto; height: auto;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
 </div>

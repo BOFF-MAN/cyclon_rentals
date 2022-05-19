@@ -1,6 +1,6 @@
 .footer {
   background: #566351;
-  position: static;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,13 +10,13 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: 0px;
+  // margin-bottom: 0px;
   color: #ffffff;
  }
 
-.footer-spacing {
-  margin-top: 20px;
-}
+// .footer-spacing {
+//   margin-top: 20px;
+// }
 
 .footer-social-links {
   display: flex;
