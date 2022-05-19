@@ -5,28 +5,48 @@
 @import "reviews";
 
 .index-container {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-gap: 20px;
-  height: 100vh;
+  display: flex;
   width: 80%;
-  top: 100px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+
+  // height: 100vh;
+  // width: 80%;
+  // top: 100px;
+  // margin-right: auto;
+  // margin-left: auto;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
 }
 
-.main-container {
-  display: flex;
+.title-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 25px;
+  padding-top: 20px;
+  text-align: center;
 }
+
+.cards-container {
+  display: grid;
+  width: 75%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  flex-grow: 1;
+  height: 100px;
+  margin-right: 20px;
+}
+
+// .main-container {
+//   display: flex;
+// }
 
 #map {
   height: 100vh;
   position: sticky;
-  top: 0;
-}
-
-.cards {
-  flex-grow: 1;
+  top: 50;
 }
