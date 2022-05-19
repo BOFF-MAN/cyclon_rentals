@@ -10,7 +10,10 @@
         <%= f.input :email, required: true, autofocus: true, class: "simp-form-input" %>
         <br>
         <%= f.label :avatar, 'Upload Avatar'%>
-        <%= f.file_field :avatar,as: :file , class: "simp-form-input"%>
+        <%= f.file_field :avatar,
+                         placeholder: 'Upload picture',
+                         direct_upload: true,
+                         class: "simp-form-input"%>
         <br>
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>

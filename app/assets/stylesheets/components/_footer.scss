@@ -1,6 +1,6 @@
 .footer {
   background: #566351;
-  position: absolute;
+  position: static;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,6 +12,11 @@
   right: 0px;
   // margin-bottom: 0px;
   color: #ffffff;
+
+  p {
+    margin: 0px;
+    padding: 8px;
+  }
  }
 
 // .footer-spacing {
