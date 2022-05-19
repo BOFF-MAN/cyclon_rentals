@@ -10,11 +10,11 @@
         <p>Dates:      <%= booking.start_date %> - <%= booking.end_date %></p>
         <p>Total Fee:  £<%= booking.total %></p>
         <% if booking.user == current_user %>
-          <%= link_to "Edit Booking", edit_booking_path(booking) %> |
+          <%= link_to "Edit Booking", edit_booking_path(booking), class: "edit-btn" %>
           <%= link_to "Delete Booking",
             booking_path(booking),
             method: :delete,
-            data: {confirm: "Are you sure?"}, style: "red bold" %>
+            data: {confirm: "Are you sure?"}, style: "red bold", class: "delete-btn" %>
         <% end %>
       </div>
       <img src="<%= cl_image_path booking.bike.photo.key %>" class="booking-img">

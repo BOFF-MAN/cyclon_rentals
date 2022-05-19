@@ -99,3 +99,48 @@
   background-color: rgb(100,100,100);
   color: #fff;
 }
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-btn {
+  width: 40%;
+  color: #fff;
+  background-color: #56635191;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  margin: 8px 0px;
+  margin-left: 16px;
+}
+
+.edit-btn:hover {
+  opacity: 1;
+  color: #2f362c;
+  border: 1px solid #2f362c;
+  background-color: #fff;
+}
+
+.delete-btn {
+  width: 40%;
+  color: #fff;
+  background-color: #ff6b6b87;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  margin-bottom: 8px;
+  margin-left: 16px;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  color: #FF6B6B;
+  border: 1px solid #FF6B6B;
+  background-color: #fff;
+}

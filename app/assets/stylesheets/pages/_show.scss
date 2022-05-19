@@ -39,11 +39,16 @@ body {
   display: flex;
   justify-content: space-evenly;
   .pricing-box {
-    background-color: rgb(210,210,210);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
     width: 30%;
     border-radius: 8px;
     padding: 8px;
     margin: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 }
 

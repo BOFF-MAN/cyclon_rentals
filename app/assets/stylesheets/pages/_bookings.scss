@@ -2,6 +2,7 @@
   margin: 24px 48px;
   width: 60%;
   align-self: center;
+
 }
 
 .booking-card {
@@ -10,8 +11,14 @@
   margin: 24px 0px;
   padding: 8px;
   border-radius: 4px;
-  background-color: #FDF6EC;
-
+  border: 1px solid #566351;
+  background-color: #5663511d;
+  .edit-btn {
+    margin: 0px;
+  }
+  .delete-btn {
+    margin: 0px;
+  }
 }
 
 .booking-card-info {

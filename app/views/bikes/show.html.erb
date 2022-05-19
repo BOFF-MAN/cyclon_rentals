@@ -22,7 +22,7 @@
           <h2>Leave a Review</h2>
           <%= simple_form_for [@bike, @review] do |f| %>
             <%= f.input :content %>
-            <%= f.input :rating %>
+            <%= f.input :rating, collection: 1..5 %>
             <%= f.submit "Submit Review", class:"btn-form-go"%>
           <% end %>
         <% end %>
@@ -56,15 +56,15 @@
         <h3>Bike Owner: <%= @bike.user.name %></h3>
         <div class="show-card-pricing">
           <div class="pricing-box">
-            <p>Daily</p>
+            <p><strong>Daily</strong></p>
             <p>£<%= @bike.daily_rate %>/day</p>
           </div>
           <div class="pricing-box">
-            <p>7+ days</p>
+            <p><strong>7+ days</strong></p>
             <p>£<%= @bike.daily_rate * 0.8 %>/day</p>
           </div>
           <div class="pricing-box">
-            <p>30+ days</p>
+            <p><strong>30+ days</strong></p>
             <p>£<%= @bike.daily_rate * 0.6 %>/day</p>
           </div>
         </div>
@@ -74,9 +74,17 @@
           <%= f.submit "Book this Bike", class: "btn btn-form-go"%>
         <% end %>
       </div>
+      <div class="btn-container">
+        <% if @bike.user == current_user %>
+            <%= link_to "Edit this listing", edit_bike_path(@bike), class: "edit-btn" %>
+            <%= link_to "Remove this listing",
+              bike_path(@bike),
+              method: :delete,
+              data: {confirm: "Are you sure?"}, style: "red bold", class: "delete-btn" %>
+        <% end %>
+      </div>
     </div>
     <%= link_to "Back to bikes", bikes_path, class: "btn-back" %>
-
   </div>
 </div>
 
