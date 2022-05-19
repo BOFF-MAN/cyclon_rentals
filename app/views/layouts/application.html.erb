@@ -13,9 +13,10 @@
   </head>
 
   <body>
-    <div><%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %></div>
+    <div class="yield">
+      <%= render 'shared/navbar' %>
+      <%= yield %>
+    </div>
   </body>
   <br>
   <footer class = "footer-spacing"><%= render 'shared/footer' %></footer>
