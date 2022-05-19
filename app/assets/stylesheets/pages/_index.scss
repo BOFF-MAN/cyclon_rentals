@@ -23,7 +23,7 @@
 .title-container {
   display: grid;
   grid-template-columns: 1fr;
-  width: 80%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 25px;
@@ -33,12 +33,16 @@
 
 .cards-container {
   display: grid;
-  width: 75%;
+  width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   flex-grow: 1;
   height: 100px;
   margin-right: 20px;
+}
+
+.all-cards {
+  width: 80%;
 }
 
 // .main-container {
@@ -47,6 +51,8 @@
 
 #map {
   height: 100vh;
+  width: auto;
   position: sticky;
   top: 50;
+  margin-left: 20px;
 }
