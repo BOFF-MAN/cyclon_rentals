@@ -98,10 +98,12 @@ margin-left: auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.cards {
+.home-cards {
   display: grid;
+  height: 250px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-bottom: 150px;
 }
 
 .card {
