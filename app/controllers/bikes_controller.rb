@@ -19,6 +19,8 @@ class BikesController < ApplicationController
   def show
     @bike = Bike.find(params[:id])
     @booking = Booking.new
+    @bookings = @bike.bookings
+    @users_booked = @bookings.map {|booking| booking.user}
     @review = Review.new
     @markers =
       [{
