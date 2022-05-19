@@ -28,13 +28,19 @@
       </li>
     </ul>
     <div class="nav-item dropdown">
-      <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/yuvalzoref" />
+      <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://en.gravatar.com/userimage/221761198/0609cffc0486a8272ef5f38096082c5d.png?size=200" />
       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="bikes">Our bikes</a>
+          <a class="dropdown-item" href="/">Home</a>
+          <a class="dropdown-item" href="bikes">Book a Bike</a>
           <a class="dropdown-item" href="bikes/new">List your bike</a>
           <a class="dropdown-item" href="bookings">Bookings</a>
           <%= link_to "Account", current_user, class: "dropdown-item" %>
-          <a class="dropdown-item" href="/">Return to homepage</a>
+
+           <% if current_user %>
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <% else %>
+          <%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
+        <% end %>
       </div>
     </div>
   </div>

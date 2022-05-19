@@ -105,3 +105,17 @@
 .reviews-card-info {
 
 }
+
+.profile-avatar-card {
+    display: flex;
+    overflow: hidden;
+    // flex-direction: column;
+    width: 271px;
+    min-width: 271px;
+    max-width: 271px;
+    margin-right: 40px;
+    // -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    // margin-top: -190px;
+}
