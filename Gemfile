@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 gem "geocoder"
 # Added devise gem for signup - Sean
 gem 'devise'
+# Added Gravatar default image
+# gem 'gravtastic'
 # Added Pundit Gem for Authorisation - Sean
 gem 'pundit'
 # Use Active Storage variant
