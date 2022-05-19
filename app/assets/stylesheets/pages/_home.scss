@@ -100,10 +100,13 @@ margin-left: auto;
 
 .home-cards {
   display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
   height: 250px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin-bottom: 150px;
+  grid-gap: 30px;
+  margin-bottom: 100px;
 }
 
 .card {
