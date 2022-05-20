@@ -36,9 +36,9 @@
 }
 
 .bike-card {
-  height: 250px;
+  height: 300px;
   overflow: hidden;
-  border-radius: 1px;
+  border-radius: 2px;
   margin: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   // display: flex;
@@ -48,6 +48,13 @@
   font-size: 22px;
   color: #566351;
   font-weight: bolder;
+  a {
+    text-decoration: none;
+    color: #566351;
+  }
+  a:hover {
+    color: #56635190;
+  }
 }
 
 // .bike-card {
@@ -75,6 +82,10 @@
   background-position: center;
 }
 
+.bike-card-img:hover {
+
+}
+
 .bike-card h2 {
   font-size: 16px;
   font-weight: bold;
@@ -87,38 +98,8 @@
   margin: 0;
 }
 
-.show-reviews {
-  margin-top: 24px 0px;
-}
-
-.reviews-container {
-
-}
 
 
-
-.review-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
-  padding: 4px;
-  border-radius: 4px;
-  box-shadow: 1px 1px 1px black;
-}
-
-.review-content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  img {
-    margin-right: 24px;
-  }
-}
-
-.reviews-card-info {
-
-}
 
 .profile-avatar-card {
     display: flex;
