@@ -1,3 +1,22 @@
+.btn-profile {
+  color: #fff;
+  background-color: #566351;
+  margin-left: 32px;
+  padding: 8px 24px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-profile:hover {
+  opacity: 1;
+  color: #2f362c;
+  border: 1px solid #2f362c;
+  background-color: #fff;
+}
+
 .btn-ghost {
   color: #fff;
   background-color: #566351;
