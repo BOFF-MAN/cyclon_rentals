@@ -9,13 +9,17 @@
 }
 
 .mapboxgl-popup-content {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
+  text-align: left;
+  font-family: $body-font;
+  a {
+    text-decoration: none;
   color: #2f362c;
+  }
+
 }
 
 .mapboxgl-ctrl-geocoder {
+  display: none;
   max-width: none;
   width: 100%;
   border: 1px solid lightgrey;
