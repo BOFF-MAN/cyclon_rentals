@@ -23,29 +23,48 @@
 
       <div class="profile-info-container">
         <%# <%= @user.info %>
-        <% if current_user.bio == nil %>
-        <h3>Bio</h3>
-        <p>
-        <%= link_to "Add Bio", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
-        </p>
-        <% else %>
-        <p><%=@user.bio%></p>
-        <% end %>
+          <% if current_user.bio == nil %>
+          <h3>Bio</h3>
+          <p>
+          <%= link_to "Add Bio", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
+          </p>
+          <% else %>
+          <p><%=@user.bio%></p>
+          <% end %>
+        </div>
       </div>
       <div class="profile-bikes-container">
-      <div>
-      <h3><%= @user.name %>'s Bikes:</h3>
-      <% @user.bikes.each do |bike| %>
+        <div>
+        <h3><%= @user.name %>'s Bikes:</h3>
+        <% @user.bikes.each do |bike| %>
+           <div class="bike-card">
+            <% if bike.photo.key? %>
+              <%= link_to bike_path(bike) do %>
+                <%= cl_image_tag(bike.photo.key) %>
+              <% end %>
+            <% else %>
+              <%= link_to bike_path(bike) do %>
+                <%= cl_image_tag('28-287336_welcome-road-bike-vector_ywbbgd') %>
+              <% end %>
+            <% end %>
+              <div class="bike-card-infos">
+                <div>
+                  <h2><%= link_to bike.name, bike_path(bike) %></h2>
+                </div>
+              <% end %>
+            <%# <h2 class="bike-card-pricing">£<%= bike.daily_rate %>
+            </div>
+          </div>
 
-        <h2><%= link_to bike.name, bike_path(bike) %></h2>
-        <% end %>
+
+
+
+
+          <%# <h2><%= link_to bike.name, bike_path(bike)  %></h2>
+          <%# <% end %>
+        </div>
+      </div>
       </div>
 
-
-
-
-      </div>
-      </div>
-      </div>
     <%# </div> %>
   </div>
