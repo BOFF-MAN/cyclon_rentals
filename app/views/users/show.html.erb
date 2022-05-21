@@ -32,12 +32,12 @@
           <p><%=@user.bio%></p>
           <% end %>
         </div>
-      </div>
-      <div class="profile-bikes-container">
-        <div>
+        <br>
         <h3><%= @user.name %>'s Bikes:</h3>
+        <br>
+        <div class="profile-bikes-container">
         <% @user.bikes.each do |bike| %>
-           <div class="bike-card">
+           <div class="bike-card bike-card-width">
             <% if bike.photo.key? %>
               <%= link_to bike_path(bike) do %>
                 <%= cl_image_tag(bike.photo.key) %>
@@ -62,7 +62,8 @@
 
           <%# <h2><%= link_to bike.name, bike_path(bike)  %></h2>
           <%# <% end %>
-        </div>
+
+      </div>
       </div>
       </div>
 
