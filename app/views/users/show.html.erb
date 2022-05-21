@@ -4,7 +4,9 @@
     <%# <div class="row"> %>
       <div class="profile-avatar-card">
         <% if current_user.avatar.attached?  %>
-          <%= image_tag current_user.avatar, class: "profile rounded-circle" %>
+
+          <%= image_tag current_user.avatar, class: "profile-rounded-circle" %>
+
         <% else %>
           <img alt="image" width="200" height="200"class="rounded-circle" src="https://en.gravatar.com/userimage/221761198/0609cffc0486a8272ef5f38096082c5d.png?size=200">
         <% end %>
