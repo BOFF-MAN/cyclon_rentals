@@ -4,7 +4,9 @@
     <%# <div class="row"> %>
       <div class="profile-avatar-card">
         <% if current_user.avatar.attached?  %>
+
           <%= image_tag current_user.avatar, class: "profile-rounded-circle" %>
+
         <% else %>
           <img alt="image" width="200" height="200"class="rounded-circle" src="https://en.gravatar.com/userimage/221761198/0609cffc0486a8272ef5f38096082c5d.png?size=200">
         <% end %>
@@ -23,17 +25,18 @@
 
       <div class="profile-info-container">
         <%# <%= @user.info %>
+        <% if current_user.bio == nil %>
+        <h3>Bio</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies sit amet ante sed fermentum. Fusce eget arcu vel ipsum tristique maximus interdum eu purus. Proin porta viverra ligula ut maximus.
-
-          Cras sed libero quis augue cursus posuere ac eget nunc. Proin non lectus id felis finibus sagittis quis non velit. Duis in erat feugiat dolor tristique gravida id ac ligula. Quisque tempor velit ac risus imperdiet faucibus. Ut ac leo pulvinar, aliquam ligula a, placerat massa.
-
-          Curabitur lacinia, diam eget dignissim congue, neque lacus tempor nisi, in dapibus ante nunc sit amet ante. Nulla scelerisque tempor efficitur. Proin et eros velit. Fusce pulvinar vehicula lobortis. Nunc quis aliquet risus. Nullam libero sapien, pretium eu lacus eu, luctus malesuada elit. Quisque volutpat dignissim quam, et tristique ex.
+        <%= link_to "Add Bio", edit_user_registration_path(current_user), class: "btn btn-profile" %>
         </p>
+        <% else %>
+        <p><%=@user.bio%></p>
+        <% end %>
       </div>
       <div class="profile-bikes-container">
       <h3><%= @user.name %>'s Bikes:</h3>
-      <%= @user.bikes %>
+      <% @user.bikes %>
       </div>
       </div>
       </div>

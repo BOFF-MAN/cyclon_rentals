@@ -19,6 +19,13 @@
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
         <br>
+        <%= f.input :name, class: "simp-form-input" %>
+        <%= f.label :bio, 'Bio'%>
+        <%= f.text_field :bio,
+                         placeholder: 'Tell us about yourself!',
+                         class: "simp-form-input" %>
+        <br>
+        <br>
         <%= f.input :password,
                     hint: "leave it blank if you don't want to change it",
                     required: false,
