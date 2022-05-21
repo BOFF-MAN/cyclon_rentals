@@ -7,6 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+puts "destroying all"
+
+Review.destroy_all
+Booking.destroy_all
+Bike.destroy_all
+User.destroy_all
+
 puts "Running seed file"
 # Seed 5 users
 puts "Seeding 4 users..."
@@ -14,19 +21,19 @@ puts "Seeding 4 users..."
 david = User.new(name: "David Bradford", email: "david.bradford@gmail.com", password: 123456, bio: "After qualifying as a Chartered Accountant at Deloitte, I moved into the tech startup world working in the finance team of a few companies. I am currently Head of Finance at Coadjute - a blockchain based network for the UK property market.
   I've always had an interest in tech and love geeking out on Excel writing long formulas. I would like to learn more about coding and learn to build my own web apps to indulge my interest.
   One day I want to launch my own business and this course will help set me on that path.")
-david.save
+david.save!
 david.avatar.attach(io: File.open(Rails.root.join("app/assets/images/avatar-db.jpeg")), filename: "avatar-db.jpeg")
 
 yuval = User.new(name: "Yuval Zoref", email: "yuval.zoref@gmail.com", password: 123456, bio: "I come from a background in theatre and i am now looking to learn a new skill for a potential career change in the near future!")
-yuval.save
+yuval.save!
 yuval.avatar.attach(io: File.open(Rails.root.join("app/assets/images/avatar-yz.jpeg")), filename: "avatar-yz.jpeg")
 
 sean = User.new(name: "Sean Buckle", email: "sean.buckle@gmail.com", password: 123456, bio: "I worked in TV and Film before moving to Computer repair and support. I want to learn to code to get more fulfilment from my employment and hopefully change my lifestyle as a result.")
-sean.save
+sean.save!
 sean.avatar.attach(io: File.open(Rails.root.join("app/assets/images/avatar-jc.jpeg")), filename: "avatar-jc.jpeg")
 
 jonno = User.new(name: "Jonno Clifford", email: "jonno.clifford@gmail.com", password: 123456, bio: "I'm Australian raised but London based for the last 10 years. I currently work as a commercial photographer and videographer, and previously worked in graphic and (basic) web design. I'm doing the bootcamp to build a complimentary skill set which may lead to a full career change, or possibly just some new approaches to current projects I work on. I'm really excited to get cracking and meet everyone!")
-jonno.save
+jonno.save!
 jonno.avatar.attach(io: File.open(Rails.root.join("app/assets/images/avatar-jc.jpeg")), filename: "avatar-jc.jpeg")
 
 # Seed 20 bikes
@@ -72,10 +79,10 @@ n = 0
     description: DESCRIPTIONS.sample,
     daily_rate: RATES.sample,
     category: CATEGORIES.sample,
-    user_id: USERS.sample,
+    user: User.all.sample,
     address: ADDRESSES[n]
   )
-  bike.save
+  bike.save!
   bike.photo.attach(io: File.open(Rails.root.join("app/assets/images/bike-pic-#{n+1}.jpg")), filename: "bike-pic-#{n+1}.jpg")
   puts "Bike #{n+1} seeded"
   n += 1
