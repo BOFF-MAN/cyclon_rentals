@@ -24,11 +24,20 @@ body {
   background-image: linear-gradient(to right, rgba(255,0,0,0), #566351);
   // background-image: linear-gradient( to right, #566351, #adb9a8 );
   // background-color: #FDF6EC;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
   animation-name: slidein;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: lighter;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  a {
+    background-color: #566351;
+    color: #f9fbf9;
+    border-radius: 8px;
+    padding: 4px;
+  }
+  a:hover {
+    background-color: #56635198;
+  }
 }
 
 // .booking-card background-image:hover {
