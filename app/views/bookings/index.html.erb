@@ -1,4 +1,4 @@
-<div class="bookings-container">
+<div class="booking-title">
   <h1>All Bookings</h1>
 
   <% @bookings.each do |booking| %>
@@ -17,8 +17,26 @@
             data: {confirm: "Are you sure?"}, style: "red bold", class: "delete-btn" %>
         <% end %>
       </div>
-      <img src="<%= cl_image_path booking.bike.photo.key %>" class="booking-img">
-    </div>
-  <% end %>
-  <%= link_to "Back to Bikes", bikes_path, class: "btn-back" %>
+   <% end %>
 </div>
+   <div class="btn-back">
+     <a href="/bikes">Back to Bikes</a>
+   </div>
+
+
+<%#
+<div id= "container">
+  <div class="row">
+    <div class="column-box">
+      <h2 class="text">Hey</h2>
+    </div>
+    <div class="column-box">
+      <h2 class="text">there</h2>
+    </div>
+    <div class="column-box">
+      <h2 class="text">lad</h2>
+    </div>
+  </div>
+  <div class="message">
+    <H1>Cyclon rentals</H1>
+  </div> %>

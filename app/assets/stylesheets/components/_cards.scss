@@ -36,9 +36,9 @@
 }
 
 .bike-card {
-  height: 300px;
+  height: 240px;
+  border-radius: 5px;
   overflow: hidden;
-  border-radius: 2px;
   margin: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   // display: flex;
@@ -55,9 +55,14 @@
   a:hover {
     color: #56635190;
   }
+  img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
 }
 
-// .bike-card {
+// .bike-card
 //   overflow: hidden;
 //   background: white;
 //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -69,15 +74,15 @@
 .bike-card .bike-card-infos {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  height: 30%;
+  align-items: center;
   position: relative;
 }
 
 .bike-card-img {
   height: 75%;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -98,6 +103,7 @@
   margin: 0;
 }
 
+
 .profile-bike-card {
   overflow: hidden;
   height: 120px;
@@ -115,4 +121,10 @@
 
 .profile-bike-card-infos {
   padding: 16px;
+}
+
+.bike-card-infos {
+
+  display: flex;
+  align-items: center;
 }

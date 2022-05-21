@@ -53,7 +53,7 @@ body {
 }
 
 .show-card-img {
-  background-size: cover;
+  background-size: contain;
   border-radius: 8px;
   width: auto;
   height: 480px;
@@ -151,6 +151,8 @@ body {
 .star-div {
   display: flex;
 }
+<<<<<<< HEAD
+=======
 
 .profile-container {
   align-items: center;
@@ -215,3 +217,4 @@ body {
 .profile-map-container {
 
 }
+>>>>>>> master
