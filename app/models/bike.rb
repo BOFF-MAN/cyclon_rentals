@@ -12,3 +12,4 @@ class Bike < ApplicationRecord
   validates :description, presence: true
   validates :category, inclusion: { in: ['Road Bike', 'Mountain Bike', 'Commuter Bike'] }
 end
+# belongs_to :category
