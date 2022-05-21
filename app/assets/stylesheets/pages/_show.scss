@@ -83,17 +83,17 @@ body {
 
 
 
-.show-map {
+// .show-map {
 
-}
+// }
 
-.show-profile {
+// .show-profile {
 
-}
+// }
 
-.show-profile-content {
+// .show-profile-content {
 
-}
+// }
 
 
 .cards {
@@ -207,12 +207,15 @@ body {
 }
 
 .profile-bikes-container {
+
   padding-top: 25px;
   width: 100%;
   height: 100vh;
+  display: grid;
+  row-gap: 50px;
 
 }
 
-.profile-map-container {
+// .profile-map-container {
 
-}
+// }

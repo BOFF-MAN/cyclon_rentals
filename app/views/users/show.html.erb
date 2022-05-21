@@ -33,22 +33,13 @@
         <% end %>
       </div>
       <div class="profile-bikes-container">
+      <div>
       <h3><%= @user.name %>'s Bikes:</h3>
-      <%= @user.bikes.each do |bike| %>
-      <div class="profile-bike-card">
-       <% if bike.photo.key? %>
-          <%= link_to bike_path(bike) do %>
-            <div class="profile-bike-card-img" style="background-image: url('<%= cl_image_path bike.photo.key %>')"></div>
-          <% end %>
+      <% @user.bikes.each do |bike| %>
+
+        <h2><%= link_to bike.name, bike_path(bike) %></h2>
         <% end %>
-        <div class="profile-bike-card-infos">
-              <div>
-                <h2><%= link_to bike.name, bike_path(bike) %></h2>
-              </div>
-            <%# <h2 class="bike-card-pricing">£<%= bike.daily_rate %>
-            </div>
-        <% end %>
-        </div>
+      </div>
 
 
 

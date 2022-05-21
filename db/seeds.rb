@@ -47,7 +47,7 @@ ADDRESSES = [
   "93 Lower Richmond Rd., London SW15 1EU",
   "41 Jews Row, London SW18 1TB",
   "Peterborough Rd, London SW6 3ED",
-  "19 Michael Rd, London SW6 2ER",
+  "197 Camberwell New Road, Southwark, London, SE5 0TJ",
   "Richmond Way, London W14 0AX",
   "Beaumont St, Oxford OX1 2PH",
   "140 Cowley Rd, Oxford OX4 1JJ",
