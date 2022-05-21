@@ -69,19 +69,25 @@
 }
 
 .btn-back {
-  width: 100%;
-  margin: 24px 4px;
-  border-radius: 4px;
-  background-color: rgb(150,150,150);
+  width: 10%;
+  // margin: 24px 4px;
+  border-radius: 6px;
+  background-color: #8d9f85;
   color: #fff;
   text-decoration: none;
   text-align: center;
-  padding: 8px;
+  padding: 10px;
+  margin: 5px auto;
+  margin-top: 20px;
+  font-size: larger;
+  cursor: pointer;
 }
 
+
 .btn-back:hover {
-  background-color: rgb(100,100,100);
+  background-color: #aab7a4;
   color: #fff;
+  opacity: 0.4;
 }
 
 .btn-form-secondary {

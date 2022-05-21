@@ -1,30 +1,105 @@
 .bookings-container {
-  margin: 24px 48px;
-  width: 60%;
+  margin: 10px auto;
+  width: 70%;
   align-self: center;
-  // height: 100vh;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  p {
+    border-width: 2px 1px 2px 1px;
+   }
+}
+body {
+  background-color: #f9fbf9;
 }
 
 .booking-card {
   display: flex;
-  justify-content: space-between;
-  margin: 24px 0px;
-  padding: 8px;
-  border-radius: 4px;
-  background-color: #FDF6EC;
-
+  width: 100%;
+  // justify-content: space-between;
+  margin: 0px auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), #566351);
+  // background-image: linear-gradient( to right, #566351, #adb9a8 );
+  // background-color: #FDF6EC;
+  animation-duration: 3s;
+  animation-name: slidein;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: lighter;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
+// .booking-card background-image:hover {
+ //create a hover for full card!
+// }
+h2 {
+  font-family: fantasy;
+  font-weight: lighter;
+}
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
 
 .booking-card-info {
   pre {
     margin: 0px;
     padding: 0px;
   }
+  margin: 5px;
 }
 
 .booking-img {
-  width: 30%;
+  width: 40%;
   object-fit: cover;
+  margin: 10px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .bookings-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .bookings-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .bookings-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .bookings-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .bookings-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.booking-title {
+  margin: 10px auto;
+  text-align: center;
+  padding: 10px;
 }
 
 // .row {
