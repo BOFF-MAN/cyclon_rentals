@@ -1,8 +1,8 @@
 .bookings-container {
   margin: 10px auto;
-  width: 70%;
+  width: 80%;
   align-self: center;
-  text-align: center;
+  text-align: left;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
@@ -21,13 +21,11 @@ body {
   margin: 0px auto;
   padding: 10px;
   border-radius: 8px;
-  background-image: linear-gradient(to right, rgba(255,0,0,0), #566351);
+  // background-image: linear-gradient(to right, rgba(255,0,0,0), #566351);
   // background-image: linear-gradient( to right, #566351, #adb9a8 );
   // background-color: #FDF6EC;
   animation-duration: 1.5s;
   animation-name: slidein;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: lighter;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   a {
     background-color: #566351;
@@ -109,6 +107,8 @@ body {
 }
 .booking-title {
   margin: 10px auto;
-  text-align: center;
+  width: 80%;
+  text-align: left;
+  margin: 10px auto;
   padding: 10px;
 }
