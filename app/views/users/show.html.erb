@@ -1,21 +1,44 @@
-
-<div class="profile-container">
-  <%# <div class="row"> %>
-    <div class=col-4>
+<div class="profile-header-container">
+  <div class="profile-container">
+    <div class="profile-left">
+    <%# <div class="row"> %>
       <div class="profile-avatar-card">
-         <% if current_user.avatar.attached?  %>
-          <%= image_tag current_user.avatar, class: "rounded-circle" %>
-         <% else %>
-           <img alt="image" width="100" height="100"class="rounded-circle" src="https://en.gravatar.com/userimage/221761198/0609cffc0486a8272ef5f38096082c5d.png?size=200">
-         <% end %>
+        <% if current_user.avatar.attached?  %>
 
-        <%# <%= @user.name %>
+          <%= image_tag current_user.avatar, class: "profile-rounded-circle" %>
 
+        <% else %>
+          <img alt="image" width="200" height="200"class="rounded-circle" src="https://en.gravatar.com/userimage/221761198/0609cffc0486a8272ef5f38096082c5d.png?size=200">
+        <% end %>
       </div>
-    <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
-    <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
-    <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
-
+      <div class="profile-button-container">
+        <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-profile" %>
+        <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-profile" %>
+        <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-profile" %>
+      </div>
     </div>
-  <%# </div> %>
-</div>
+
+    <div class="profile-right">
+      <div class="profile-name-container">
+        <%= @user.name %>
+      </div>
+
+      <div class="profile-info-container">
+        <%# <%= @user.info %>
+        <% if current_user.bio == nil %>
+        <h3>Bio</h3>
+        <p>
+        <%= link_to "Add Bio", edit_user_registration_path(current_user), class: "btn btn-profile" %>
+        </p>
+        <% else %>
+        <p><%=@user.bio%></p>
+        <% end %>
+      </div>
+      <div class="profile-bikes-container">
+      <h3><%= @user.name %>'s Bikes:</h3>
+      <% @user.bikes %>
+      </div>
+      </div>
+      </div>
+    <%# </div> %>
+  </div>

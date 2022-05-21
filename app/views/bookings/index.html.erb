@@ -1,24 +1,21 @@
 <div class="booking-title">
   <h1>All Bookings</h1>
-</div>
-<div class="bookings-container">
-    <% @bookings.each do |booking| %>
-      <div class="booking-card">
-        <div class="booking-card-info">
-          <h2>Booking <%= booking.id %></h2>
-          <p>Bike:       <%= booking.bike.name %></p>
-          <p>Booked by:  <%= booking.user.name %></p>
-          <p>Dates:      <%= booking.start_date %> - <%= booking.end_date %></p>
-          <p>Total Fee:  £<%= booking.total %></p>
-          <% if booking.user == current_user %>
-            <%= link_to "Edit Booking", edit_booking_path(booking) %> |
-            <%= link_to "Delete Booking",
-              booking_path(booking),
-              method: :delete,
-              data: {confirm: "Are you sure?"}, style: "red bold" %>
-          <% end %>
-        </div>
-        <img src="<%= cl_image_path booking.bike.photo.key %>" class="booking-img">
+
+  <% @bookings.each do |booking| %>
+    <div class="booking-card">
+      <div class="booking-card-info">
+        <h2>Booking #<%= booking.id %></h2>
+        <p>Bike:       <%= booking.bike.name %></p>
+        <p>Booked by:  <%= booking.user.name %></p>
+        <p>Dates:      <%= booking.start_date %> - <%= booking.end_date %></p>
+        <p>Total Fee:  £<%= booking.total %></p>
+        <% if booking.user == current_user %>
+          <%= link_to "Edit Booking", edit_booking_path(booking), class: "edit-btn" %>
+          <%= link_to "Delete Booking",
+            booking_path(booking),
+            method: :delete,
+            data: {confirm: "Are you sure?"}, style: "red bold", class: "delete-btn" %>
+        <% end %>
       </div>
    <% end %>
 </div>

@@ -10,4 +10,5 @@ class Bike < ApplicationRecord
   validates :daily_rate, presence: true
   validates :address, presence: true
   validates :description, presence: true
+  validates :category, inclusion: { in: ['Road Bike', 'Mountain Bike', 'Commuter Bike'] }
 end

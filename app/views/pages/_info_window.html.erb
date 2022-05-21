@@ -1,3 +1,5 @@
-<h2><%= bike.name %></h2>
+<div class="info-window">
+<h2><%= link_to bike.name, bike_path(bike) %></h2>
 <p><%= bike.address %></p>
 <p><%= bike.description %></p>
+</div>
