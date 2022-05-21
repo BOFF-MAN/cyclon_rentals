@@ -13,9 +13,7 @@
       </div>
       <div class="profile-button-container">
         <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-profile" %>
-        <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-profile" %>
-        <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-profile" %>
-      </div>
+       </div>
     </div>
 
     <div class="profile-right">
@@ -28,7 +26,7 @@
         <% if current_user.bio == nil %>
         <h3>Bio</h3>
         <p>
-        <%= link_to "Add Bio", edit_user_registration_path(current_user), class: "btn btn-profile" %>
+        <%= link_to "Add Bio", edit_user_registration_path(current_user), class: "btn btn-ghost" %>
         </p>
         <% else %>
         <p><%=@user.bio%></p>
@@ -36,7 +34,25 @@
       </div>
       <div class="profile-bikes-container">
       <h3><%= @user.name %>'s Bikes:</h3>
-      <% @user.bikes %>
+      <%= @user.bikes.each do |bike| %>
+      <div class="profile-bike-card">
+       <% if bike.photo.key? %>
+          <%= link_to bike_path(bike) do %>
+            <div class="profile-bike-card-img" style="background-image: url('<%= cl_image_path bike.photo.key %>')"></div>
+          <% end %>
+        <% end %>
+        <div class="profile-bike-card-infos">
+              <div>
+                <h2><%= link_to bike.name, bike_path(bike) %></h2>
+              </div>
+            <%# <h2 class="bike-card-pricing">£<%= bike.daily_rate %>
+            </div>
+        <% end %>
+        </div>
+
+
+
+
       </div>
       </div>
       </div>

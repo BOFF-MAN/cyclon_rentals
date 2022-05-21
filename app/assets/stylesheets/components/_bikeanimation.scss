@@ -6,10 +6,14 @@
   min-height: 200px;
 }
 
-body, html {
+html {
   position: relative;
   height: 100%;
   background:#566351;
+}
+
+body {
+  min-height: 100%;
 }
 
 *, *:before, *:after {position: absolute;}
