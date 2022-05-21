@@ -5,9 +5,9 @@
       <%= simple_form_for @booking do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true %>
-        <%= f.submit "Rent Bike"%>
+        <%= f.submit "Confirm changes", class: "btn btn-form-go" %>
       <% end %>
-      <%= link_to "Cancel", bikes_path %>
+      <%= link_to "Cancel", bookings_path, class: "btn-form-cancel"  %>
     </div>
   </div>
 </div>
