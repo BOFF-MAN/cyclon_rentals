@@ -1,4 +1,4 @@
-<div class="main">
+<%# <div class="main"> %>
 <div class="index-container">
   <div class="all-cards">
   <div class="title-container">
@@ -19,7 +19,7 @@
           <% end %>
         <% else %>
           <%= link_to bike_path(bike) do %>
-            <%= cl_image_tag("bike_stock") %>
+            <%= cl_image_tag('28-287336_welcome-road-bike-vector_ywbbgd') %>
           <% end %>
         <% end %>
             <div class="bike-card-infos">
@@ -39,4 +39,4 @@
     data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-</div>
+<%# </div> %>
