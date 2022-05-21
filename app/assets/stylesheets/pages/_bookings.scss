@@ -1,35 +1,144 @@
 .bookings-container {
-  margin: 24px 48px;
-  width: 60%;
+  margin: 10px auto;
+  width: 70%;
   align-self: center;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  p {
+    border-width: 2px 1px 2px 1px;
+   }
+}
+body {
+  background-color: #f9fbf9;
 }
 
 .booking-card {
   display: flex;
-  justify-content: space-between;
-  margin: 24px 0px;
-  padding: 20px;
-  border-radius: 4px;
-  border: 1px solid #566351;
-  background-color: #5663511d;
-  .edit-btn {
-    margin: 0px;
+  width: 100%;
+  // justify-content: space-between;
+  margin: 0px auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), #566351);
+  // background-image: linear-gradient( to right, #566351, #adb9a8 );
+  // background-color: #FDF6EC;
+  animation-duration: 3s;
+  animation-name: slidein;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: lighter;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+// .booking-card background-image:hover {
+ //create a hover for full card!
+// }
+h2 {
+  font-family: fantasy;
+  font-weight: lighter;
+}
+@keyframes slidein {
+  from {
+    margin-top: 100%;
   }
-  .delete-btn {
-    margin: 0px;
+
+  to {
+    margin-top: 0%;
   }
 }
+
 
 .booking-card-info {
   pre {
     margin: 0px;
     padding: 0px;
   }
+  margin: 5px;
 }
 
 .booking-img {
-  width: 30%;
+  width: 40%;
   object-fit: cover;
+  margin: 10px;
 }
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .bookings-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .bookings-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .bookings-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .bookings-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .bookings-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.booking-title {
+  margin: 10px auto;
+  text-align: center;
+  padding: 10px;
+}
+
+// .row {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-evenly;
+// }
+// .column-box {
+//   animation-duration: 3s;
+//   animation-name: slidein;
+//   width: 100px;
+//   height: 100px;
+//   background: #8FBC8F;
+//   color: #A0522D;
+//   border: solid;
+//   border-bottom: 20px double #DCDCDC;
+//   border-color: #DCDCDC;
+//   border-radius: 4px;
+//   box-shadow: 5px 10px 5px #888888;
+//   opacity: 0.7;
+// }
+// .column-box:hover {
+//   background: #A0522D;
+//   color: #8FBC8F;
+//   box-shadow: 5px 10px;
+//   width: 110px;
+//   height: 110px;
+//   padding-top: 20px;
+//   opacity: 0.3;
+// }
+
+
+// @keyframes slidein {
+//   from {
+//     margin-top: 100%;
+//   }
+
+//   to {
+//     margin-top: 0%;
+//   }
+// }
